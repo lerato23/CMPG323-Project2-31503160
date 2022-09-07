@@ -21,7 +21,7 @@ namespace IoTDevicesProject.Business_logic
             return zones;
         }
 
-        public Zone getCategoryWithId(Guid zoneId)
+        public Zone getZoneWithId(Guid zoneId)
         {
             Zone zone = new Zone();
             zone = iotdeviceDBContext.Zones.Where(x => x.ZoneId== zoneId).Single();
@@ -61,7 +61,7 @@ namespace IoTDevicesProject.Business_logic
             }
         }
 
-        public void deleteCategory(Zone cat)
+        public void deleteZone(Zone cat)
         {
             if (zoneChecker(cat.ZoneId))
             {

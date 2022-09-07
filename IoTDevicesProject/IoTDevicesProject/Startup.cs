@@ -1,3 +1,4 @@
+using IoTDevicesProject.Business_logic;
 using IoTDevicesProject.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -34,6 +35,9 @@ namespace IoTDevicesProject
                 Name = "Lerato Shabalala"
             }
             }));
+            services.AddScoped<CategoryFunctions, CategoryFunctions>();
+            services.AddScoped<ZoneFunctions, ZoneFunctions>();
+            services.AddScoped<DeviceFunctions, DeviceFunctions>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
