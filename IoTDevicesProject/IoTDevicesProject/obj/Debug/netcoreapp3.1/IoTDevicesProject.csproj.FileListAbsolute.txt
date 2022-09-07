@@ -52,7 +52,6 @@ C:\Users\Ian\source\repos\IoTDevicesProject\IoTDevicesProject\bin\Debug\netcorea
 C:\Users\Ian\source\repos\IoTDevicesProject\IoTDevicesProject\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\Ian\source\repos\IoTDevicesProject\IoTDevicesProject\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Ian\source\repos\IoTDevicesProject\IoTDevicesProject\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Ian\source\repos\IoTDevicesProject\IoTDevicesProject\obj\Debug\netcoreapp3.1\IoTDevicesProject.csproj.AssemblyReference.cache
 C:\Users\Ian\source\repos\IoTDevicesProject\IoTDevicesProject\obj\Debug\netcoreapp3.1\IoTDevicesProject.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Ian\source\repos\IoTDevicesProject\IoTDevicesProject\obj\Debug\netcoreapp3.1\IoTDevicesProject.AssemblyInfoInputs.cache
 C:\Users\Ian\source\repos\IoTDevicesProject\IoTDevicesProject\obj\Debug\netcoreapp3.1\IoTDevicesProject.AssemblyInfo.cs
@@ -67,3 +66,4 @@ C:\Users\Ian\source\repos\IoTDevicesProject\IoTDevicesProject\obj\Debug\netcorea
 C:\Users\Ian\source\repos\IoTDevicesProject\IoTDevicesProject\obj\Debug\netcoreapp3.1\IoTDevicesProject.dll
 C:\Users\Ian\source\repos\IoTDevicesProject\IoTDevicesProject\obj\Debug\netcoreapp3.1\IoTDevicesProject.pdb
 C:\Users\Ian\source\repos\IoTDevicesProject\IoTDevicesProject\obj\Debug\netcoreapp3.1\IoTDevicesProject.genruntimeconfig.cache
+C:\Users\Ian\source\repos\IoTDevicesProject\IoTDevicesProject\obj\Debug\netcoreapp3.1\IoTDevicesProject.csproj.AssemblyReference.cache
