@@ -49,16 +49,17 @@ namespace IoTDevicesProject.Business_logic
 
         public void updateZone(Zone zone)
         {
-            if (zoneChecker(zone.ZoneId))
+            if (!zoneChecker(zone.ZoneId))
             {
-                Zone zone1 = new Zone();
-                zone1.ZoneId= zone.ZoneId;
-                zone1.DateCreated = zone.DateCreated;
-                zone1.ZoneName= zone.ZoneName;
-                zone1.ZoneDescription= zone.ZoneDescription;
-                iotdeviceDBContext.Zones.Update(zone1);
-                iotdeviceDBContext.SaveChanges();
+                throw new KeyNotFoundException();
             }
+            Zone zone1 = iotdeviceDBContext.Zones.Where(e => e.ZoneId == zone.ZoneId).FirstOrDefault(); 
+            zone1.ZoneId = zone.ZoneId;
+            zone1.DateCreated = zone.DateCreated;
+            zone1.ZoneName = zone.ZoneName;
+            zone1.ZoneDescription = zone.ZoneDescription;
+            iotdeviceDBContext.Zones.Update(zone1);
+            iotdeviceDBContext.SaveChanges();
         }
 
         public void deleteZone(Zone cat)

@@ -37,6 +37,23 @@ namespace IoTDevicesProject.Controllers
             return Ok(cf.getCategoryWithId(id));
         }
 
+        [HttpGet]
+        [Route("allDevicesInCategory/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Category))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult allDevicesInCategory(Guid id)
+        {
+            return Ok(cf.devicesInCategory(id));
+        }
+
+        [HttpGet]
+        [Route("ZonesAffectedByCategory/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Category))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult ZonesAffectedByCategory(Guid id)
+        {
+            return Ok(cf.zoneVsCategory(id));
+        }
 
         [HttpPost]
         [Route("create")]

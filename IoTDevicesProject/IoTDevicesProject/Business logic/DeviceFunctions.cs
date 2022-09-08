@@ -50,19 +50,20 @@ namespace IoTDevicesProject.Business_logic
 
         public void updateDevice(Device device)
         {
-            if (deviceChecker(device.DeviceId))
+            if (!deviceChecker(device.DeviceId))
             {
-                Device device1 = new Device();
-                device1.DeviceId = device.DeviceId;
-                device1.DateCreated = device.DateCreated;
-                device1.IsActvie = device.IsActvie;
-                device1.CategoryId = device.CategoryId;
-                device1.ZoneId = device.ZoneId;
-                device1.DeviceName = device.DeviceName;
-                device1.Status = device.Status;
-                iotdeviceDBContext.Devices.Update(device1);
-                iotdeviceDBContext.SaveChanges();
+                throw new KeyNotFoundException();
             }
+            Device device1 = iotdeviceDBContext.Devices.Where(e => e.DeviceId == device.DeviceId).FirstOrDefault();
+            device1.DeviceId = device.DeviceId;
+            device1.DateCreated = device.DateCreated;
+            device1.IsActvie = device.IsActvie;
+            device1.CategoryId = device.CategoryId;
+            device1.ZoneId = device.ZoneId;
+            device1.DeviceName = device.DeviceName;
+            device1.Status = device.Status;
+            iotdeviceDBContext.Devices.Update(device1);
+            iotdeviceDBContext.SaveChanges();
         }
 
         public void deleteDevice(Device device)
